@@ -1,0 +1,6 @@
+// Aspot additions start file 
+version "4.5"
+
+//#include "seige_ping.zsc"
+//#include "b4b_ping.zsc"
+#include "seigepingbasic.zsc"

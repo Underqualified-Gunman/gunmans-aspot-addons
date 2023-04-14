@@ -1,0 +1,9 @@
+tools used
+aesprite
+notepad++
+
+arookas for the aspot mod which this is based off of.
+ubisoft for the ping sound from rainbow six siege
+ping sprite were recreated by me (Underqualified Gunman)
+
+this project is under the license that ASPOT currently uses contained in license.md inside this mod file.

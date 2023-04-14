@@ -1,0 +1,58 @@
+
+//
+// This file is part of ASPOT.
+// See README and LICENSE for details.
+//
+
+// -------------------------------------------------------------------------- //
+
+class AS_addon_seige : ASpotBasicStyle {
+
+  override string GetStyleName() const {
+    return "siege";
+  }
+
+  override string GetTexName(ASpotType type) const {
+    switch (type) {
+      case ASPOT_MONSTER: { return "r6sR1"; }
+      case ASPOT_PICKUP:  { return "r6sW1"; }
+      case ASPOT_FRIEND:  { return "r6sB1"; }
+      default:            { return "r6sY1"; }
+    }
+  }
+
+  override name GetSpotClass() const {
+    return 'AS_addon_seige_puff';
+  }
+
+  override vector2 GetDrawMargin() const {
+    return (80, 40);
+  }
+
+}
+
+// -------------------------------------------------------------------------- //
+
+class AS_addon_seige_puff : ASpotBasicPuff {
+
+  States 
+  {
+
+		Spawn:
+			TNT1 A 35 nodelay 
+			{
+				A_StartSound
+				(
+					"ping/siege", slot: CHAN_AUTO,
+					flags: (CHANF_NOPAUSE | CHANF_UI | CHANF_OVERLAP),
+					volume: 1.0, attenuation: ATTN_NONE
+				);
+			}
+			TNT1 A 525;
+			Stop;
+
+  }
+
+}
+
+// -------------------------------------------------------------------------- //
